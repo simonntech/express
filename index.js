@@ -9,6 +9,13 @@ app.get('/blog', (req, res) => {
     res.send('Bem-vindo ao meu blog!');
 });
 
+app.get('/ola/:nome/:empresa', (req, res) => {
+    //pegando por parâmetro
+    const nome = req.params.nome;
+    const empresa = req.params.empresa;
+    res.send(`😁 Olá ${nome} ! Empresa: ${empresa}`);
+});
+
 app.listen(3000, function(err) { //tratamento de erro na inicialização do servidor
     // não se esquecer de tratar o erro caso não inicie o servidor
     if (err) {
