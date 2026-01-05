@@ -1,9 +1,12 @@
 const express = require('express');
 const app = express();
-
 // rota, lembrar de usar arrow function
 app.get('/', (req, res) => {
-    res.send('<h3> Hello World! 🐈‍⬛</h3>');
+    res.send('Hello World! 🐈‍⬛');
+});
+
+app.get('/blog', (req, res) => {
+    res.send('Bem-vindo ao meu blog!');
 });
 
 app.listen(3000, function(err) { //tratamento de erro na inicialização do servidor
